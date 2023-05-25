@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "preact/hooks";
 // import Pagino from '../Pagino.tsx';
-import { Pagino } from "../../../../PaginoDeno/mod.ts";
+//import { Pagino } from "../../../../PaginoDeno/mod.ts";
+import { Pagino } from "../../../mod.ts";
 
 export default function Body() {
   const count = useRef(0);
