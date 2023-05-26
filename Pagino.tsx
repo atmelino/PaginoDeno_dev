@@ -175,22 +175,25 @@ export function Pagino(props: PaginoProps) {
 
     }, []);
 
-    return (
-        <>
-            <div>
-                <div class="flex text-xs">
-                    <nav aria-label="Page navigation example">
-                        <ul class="inline-flex items-center ">
-                            {pages.map(renderElement)}
-                        </ul>
-                    </nav>
+    if (count < 2)
+        return
+    else
+        return (
+            <>
+                <div>
+                    <div class="flex text-xs">
+                        <nav aria-label="Page navigation example">
+                            <ul class="inline-flex items-center ">
+                                {pages.map(renderElement)}
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-            <div class=" font-bold text-xl">
-                <h1>Page: {currentpage.current}</h1>
-            </div>
-        </>
-    );
+                <div class=" font-bold text-xl">
+                    <h1>Page: {currentpage.current}</h1>
+                </div>
+            </>
+        );
 
 
 }
