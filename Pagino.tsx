@@ -66,14 +66,6 @@ export function Pagino(props: PaginoProps) {
         const startPages = createStartPages(boundaryCount, count);
         const endPages = createEndPages(boundaryCount, count);
 
-        console.log(
-            "bC_c_cp_sC",
-            boundaryCount,
-            count,
-            currentpage.current,
-            siblingCount,
-        );
-
         const siblingsStart = createSiblingsStart(
             boundaryCount,
             count,
@@ -148,10 +140,6 @@ export function Pagino(props: PaginoProps) {
         const inactive = "px-2 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
         const active = "z-10 px-2 py-2 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
 
-        // if (page === "start-ellipsis" || page === "end-ellipsis") {
-        //     return <button key={page}>...</button>;
-        // }
-
         if (page === "start-ellipsis" || page === "end-ellipsis") {
             return <li key={page} class={inactive}>...</li>;
         }
@@ -171,11 +159,12 @@ export function Pagino(props: PaginoProps) {
 
     useEffect(() => {
         // onChange: (page, count) => setPages(_.getPages())
+        // console.log("enter Pagino.tsx useEffect()")
+        // console.log("count=" + count)
         setPages(getPages())
+    }, [props]);
 
-    }, []);
-
-    if (count < 2)
+    if (!(count > 1))
         return
     else
         return (
@@ -188,9 +177,6 @@ export function Pagino(props: PaginoProps) {
                             </ul>
                         </nav>
                     </div>
-                </div>
-                <div class=" font-bold text-xl">
-                    <h1>Page: {currentpage.current}</h1>
                 </div>
             </>
         );
