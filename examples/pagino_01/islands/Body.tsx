@@ -4,11 +4,6 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import { Pagino } from "../../../mod.ts";
 
 export default function Body() {
-  const count = useRef(0);
-
-  useEffect(() => {
-    count.current = count.current + 1;
-  });
 
   function onChange() { }
 

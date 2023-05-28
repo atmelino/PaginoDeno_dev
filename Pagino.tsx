@@ -9,7 +9,7 @@ interface PaginoProps {
     page?: number;
     siblingCount: number;
     boundaryCount: number;
-    onChange: (page: number, count: number) => void;
+    onChange: (page: number) => void;
 }
 
 export function Pagino(props: PaginoProps) {
@@ -158,9 +158,6 @@ export function Pagino(props: PaginoProps) {
     };
 
     useEffect(() => {
-        // onChange: (page, count) => setPages(_.getPages())
-        // console.log("enter Pagino.tsx useEffect()")
-        // console.log("count=" + count)
         setPages(getPages())
     }, [props]);
 
