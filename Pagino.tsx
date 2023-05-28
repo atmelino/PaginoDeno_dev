@@ -132,7 +132,7 @@ export function Pagino(props: PaginoProps) {
 
         setPages(getPages());
 
-        onChange(currentpage.current, count);
+        onChange(currentpage.current);
 
     }
 
