@@ -12,7 +12,7 @@ https://codesandbox.io/s/pagino-13pit
 
 ## Example
 
-![pagino01](images/pagino01.png)
+![pagino_01](images/pagino_01.png)
 
 ## Link to deno.land
 
