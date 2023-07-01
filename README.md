@@ -36,7 +36,7 @@ import { Pagino } from "https://deno.land/x/paginodeno/mod.ts";
                 onChange={onChange}
             />
        </>
-  );
+    );
 ```
 
 ## Features
